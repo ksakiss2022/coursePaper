@@ -46,44 +46,44 @@ public class Employee {
 
     }
 
-    public Integer id() {
-        return this.id();
+    public Integer getId() {
+        return this.id;
     }
 
     public String getLastName() {
-        return lastName;
+        return this.lastName;
+    }
+
+    public String getFirstName() {
+        return this.firstName;
+    }
+
+    public String getPatronymic() {
+        return this.patronymic;
+    }
+
+    public int getDepartment() {
+        return this.department;
+    }
+
+    public int getWages() {
+        return this.wages;
     }
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
 
-    public String getFirstName() {
-        return firstName;
-    }
-
     public void setFirstName(String firstName) {
         this.firstName = firstName;
-    }
-
-    public String getPatronymic() {
-        return patronymic;
     }
 
     public void setPatronymic(String patronymic) {
         this.patronymic = patronymic;
     }
 
-    public int getDepartment() {
-        return department;
-    }
-
     public void setDepartment(int department) {
         this.department = department;
-    }
-
-    public int getWages() {
-        return wages;
     }
 
     public void setWages(int wages) {
