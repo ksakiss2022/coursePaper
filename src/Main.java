@@ -39,56 +39,44 @@ public class Main {
         int sum = 0;
         for (int i = 0; i < employeeParameters.length; i++) {
             sum += employeeParameters[i].getWages();
-        }
-        System.out.println("Сумма затрат на зарплаты в меяц составила: " + sum + " руб.");
 
+            System.out.println("Сумма затрат на зарплаты в меяц составила: " + sum + " руб.");
+        }
+
+        // 3. Найти сотрудника с максимальной зарплатой.
+        int max = employeeParameters[0].getWages();
+        for (Employee employeeParametersMax : employeeParameters) {
+            if (employeeParametersMax.getWages() > max) {
+
+                max = employeeParametersMax.getWages();
+            }
+            System.out.println("Максимальная зарплата " + max);
+        }
+//    4. Найти сотрудника с минимальной зарплатой.
+        int min = employeeParameters[0].getWages();
+        for (Employee employeeParametersMin : employeeParameters) {
+            if (employeeParametersMin.getWages() < min) {
+                min = employeeParametersMin.getWages();
+                {
+                    System.out.println("минимальная зарплата " + min);
+                }
+            }
+        }
+        // 5. Подсчитать среднее значение зарплат (можно использовать для этого метод из пункта b).
+        double averageWages = sum / employeeParameters.length;
+        {
+            System.out.println("Среднее значение затрат = " + averageWages + "руб.");
+        }
+
+        // 6. Получить Ф. И. О. всех сотрудников (вывести в консоль).
+        for (int i = 0; i < employeeParameters.length; i++) {
+
+            System.out.println(employeeParameters[i].getLastName()
+                    + employeeParameters[i].getFirstName() +" "+ employeeParameters[i].getPatronymic());
+        }
 
     }
+
+
 }
 
-//    3. Найти сотрудника с максимальной зарплатой.
-//  int max = 0;
-//for (Employee employee:employeeParameters) {
-//  if (employeeParameters[i].getWages()>max);{
-//max=employeeParameters[i].getWages();
-
-
-//System.out.println("Максимальная зарплата" + max);
-
-
-// int max = day[0];
-//        for (int dayMax : day) {
-//            if (dayMax > max) {
-//                max = dayMax;
-
-
-//    4. Найти сотрудника с минимальной зарплатой.
-//public static void findMinWages() {
-
-//  int minWages = allEmployee[0].getWages();
-//for (Employee employee : allEmployee) {
-//  if (employee != null) {
-//    if (employee.getWages() < minWages) {
-//      minWages = employee.getWages();
-//}
-//}
-//}
-//System.out.println("минимальная зарплата " + minWages);
-//}
-
-
-// 5. Подсчитать среднее значение зарплат (можно использовать для этого метод из пункта b).
-//   public static double averageWage () {
-//      return totalWages() / (double) allEmployee.length;
-//   }
-
-// 6. Получить Ф. И. О. всех сотрудников (вывести в консоль).
-//public static void printFullName() {
-//  for (Employee employee : allEmployee) {
-//    {
-//      System.out.println(employee.toString());
-// }
-
-//}
-//}
-//}
