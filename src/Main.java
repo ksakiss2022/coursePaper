@@ -45,22 +45,25 @@ public class Main {
 
         // 3. Найти сотрудника с максимальной зарплатой.
         int max = employeeParameters[0].getWages();
-        for (Employee employeeParametersMax : employeeParameters) {
-            if (employeeParametersMax.getWages() > max) {
+        for (int i = 0; i < employeeParameters.length; i++) {
+            if (employeeParameters[i].getWages() > max) {
 
-                max = employeeParametersMax.getWages();
+                max = employeeParameters[i].getWages();
             }
-            System.out.println("Максимальная зарплата " + max);
+            System.out.println("Максимальная зарплата" + max);
         }
 //    4. Найти сотрудника с минимальной зарплатой.
+
         int min = employeeParameters[0].getWages();
-        for (Employee employeeParametersMin : employeeParameters) {
-            if (employeeParametersMin.getWages() < min) {
-                min = employeeParametersMin.getWages();
+        for (int i = 0; i < employeeParameters.length; i++) {
+            if (min>employeeParameters[i].getWages()) {
+                min = employeeParameters[i].getWages();
+
                 {
                     System.out.println("минимальная зарплата " + min);
                 }
             }
+
         }
         // 5. Подсчитать среднее значение зарплат (можно использовать для этого метод из пункта b).
         double averageWages = sum / employeeParameters.length;
