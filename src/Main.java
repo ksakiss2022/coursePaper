@@ -37,34 +37,29 @@ public class Main {
         }
         //    2. Посчитать сумму затрат на зарплаты в месяц.
         int sum = 0;
-        for (int i = 0; i < employeeParameters.length; i++) {
+        for (int i = 0; i < employeeParameters.length; i++)
             sum += employeeParameters[i].getWages();
 
             System.out.println("Сумма затрат на зарплаты в меяц составила: " + sum + " руб.");
-        }
+
 
         // 3. Найти сотрудника с максимальной зарплатой.
         int max = employeeParameters[0].getWages();
-        for (int i = 0; i < employeeParameters.length; i++) {
-            if (employeeParameters[i].getWages() > max) {
+        for (int i = 0; i < employeeParameters.length; i++)
+            if (employeeParameters[i].getWages() > max)
 
                 max = employeeParameters[i].getWages();
-            }
-            System.out.println("Максимальная зарплата" + max);
-        }
+
+            System.out.println("Максимальная зарплата= " + max);
+
 //    4. Найти сотрудника с минимальной зарплатой.
 
         int min = employeeParameters[0].getWages();
-        for (int i = 0; i < employeeParameters.length; i++) {
-            if (min>employeeParameters[i].getWages()) {
+        for (int i = 0; i < employeeParameters.length; i++)
+            if (min>employeeParameters[i].getWages())
                 min = employeeParameters[i].getWages();
+                    System.out.println("минимальная зарплата= " + min);
 
-                {
-                    System.out.println("минимальная зарплата " + min);
-                }
-            }
-
-        }
         // 5. Подсчитать среднее значение зарплат (можно использовать для этого метод из пункта b).
         double averageWages = sum / employeeParameters.length;
         {
