@@ -11,19 +11,6 @@ public class Employee {
     private Integer id;
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Employee employee = (Employee) o;
-        return department == employee.department && wages == employee.wages && firstName.equals(employee.firstName) && lastName.equals(employee.lastName) && patronymic.equals(employee.patronymic) && id.equals(employee.id);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(firstName, lastName, patronymic, department, wages, id);
-    }
-
-    @Override
     public String toString() {
         return "Employee{" +
                 "firstName='" + firstName + '\'' +
